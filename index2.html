@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  
+<form id='foo' method="get" action="https://script.google.com/macros/s/AKfycbzvQjwigUJcCRqrX7LDBbAPmHzKBp_-SZZnD_RcZxfPSfNyc6Dl/exec">
+Reference_no:<input type="text" id="Ref_no"  /><br><br><br>
+Product_no:<input type="text" id="prod_no"  /><br><br><br>
+
+
+<table>
+<fieldset>
+Client Details:
+ <input type = "text" name = "Description" placeholder="Description" />
+ <form >
+         Company: <input type = "text" name = "com_name" placeholder="Your Company Name" required />
+         <br><br>
+         Correspondent Name: <input type = "text" name = "corr_name" placeholder="Correspondent Name" required/><br><br>
+		 
+		 Client Type:
+		  <input type = "radio" name = "CT" value = "New"> New<br>
+         <input type = "radio" name = "CT" value = "Old"> Old<br>
+		  <input type = "radio" name = "CT" value = "Register"> Register<br>
+         <input type = "radio" name = "CT" value = "Tender"> Tender<br>
+		  <input type = "radio" name = "CT" value = "Under Contract"> Under Contract<br>
+         <input type = "radio" name = "CT" value = "Other"> Other
+		 <input type= "text" name="CT" placeholder="Write Other type">
+		 
+      </form>
+</fieldset>
+<br><br>
+<fieldset>
+Enquiry/Order Details:<br>
+
+ <input type = "text" name = "Description" placeholder="Description" />
+ 
+         Date of Enquiry : <input type = "date" name = "DOE"  required />
+         <br><br>
+         
+         Quotation expected by : <input type = "date" name = "QEB"  required />
+         <br><br>
+		 
+         Delivery Date : <input type = "date" name = "DD"  required />
+         <br><br>
+		 Enquiry Type:<br>
+		  <input type = "radio" name = "CT" value = "New"> New<br>
+         <input type = "radio" name = "CT" value = "Repeat"> Repeat<br>
+		  <input type = "radio" name = "CT" value = "ARC"> ARC<br>
+         <input type = "radio" name = "CT" value = "Other"> Other
+		 <input type= "text" name="CT" placeholder="Write Other type">
+		 
+		 <br><br>
+		Product:<br><br>
+			<input type = "text" name = "Description" placeholder="Description" /><br>
+		  Type<br><input type = "radio" name = "P" value = "Filter Element / Cartridges">Filter Element / Cartridges<br>
+         <input type = "radio" name = "P" value = "Filter Unit (Basket Type / Cartridges Type / 'T' Type / 'Y' Type)"> Filter Unit (Basket Type / Cartridges Type / 'T' Type / 'Y' Type)<br>
+		  <input type = "radio" name = "P" value = "Strainers  (Conical/Basket/Cylindrical)"> Strainers  (Conical/Basket/Cylindrical)<br>
+         <input type = "radio" name = "P" value = "Other"> Other
+		 <input type= "text" name="P" placeholder="Write Other type">
+		 <br>
+		 Paste drive link to the data files <br>
+		 <input type="text" id="Drivelink" placeholder="Drive link" required>
+		
+
+
+   <input onclick="formSubmit()" type="button" value="Add Row" />
+   <input onclick="google.script.host.close()" type="button" value="Exit" />
+   </form>
+  <script type="text/javascript">
+  function formSubmit() {
+            google.script.run.getValuesFromForm(document.forms[0]);
+        }
+    </script>
